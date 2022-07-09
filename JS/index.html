@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <h1>Mozilla is cool</h1>
+    
+    <img src="images/firefox-icon.png" width="250" height="250" alt="The Firefox logo: a flaming fox surrounding the Earth.">
+
+    <p>At Mozilla, we’re a global community of</p>
+
+    <ul> <!-- changed to list in the tutorial -->
+      <li>technologists</li>
+      <li>thinkers</li>
+      <li>builders</li>
+    </ul>
+
+    <p>working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
+
+    <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> to learn even more about the values and principles that guide the pursuit of our mission.</p>
+    
+    <script>
+        /* Query Selector from html */
+        const myHeading = document.querySelector('h1');
+        myHeading.textContent = "I changed h1 to my name Alden";
+
+            /*Set an array then print on console*/
+            let setArray = [1,'bob','jay'];
+            // console.log(setArray[2]);
+
+        /*Simple if else statement*/
+        let iceCream = 'chocolate';
+        if (iceCream === 'chocolate') {
+            // alert('Chocolate Ice Cream');
+        } else {
+            alert('I want that chocolate Ice Cream');
+        }
+
+            /* Function in Javascript */
+            function multiply(num1,num2) {
+                let result = num1 * num2;
+                return result;
+            }
+            /* Calling a function */
+            console.log(multiply(2,8));
+
+        /* Event Handlers */
+            document.querySelector('html').addEventListener('click', function() {
+            // alert('Ouch! Stop poking me!');
+        });
+
+        /* Other way to do above code declaring a new variable */
+        let myHTML = document.querySelector('html');
+            myHTML.addEventListener('click', function() {
+            // alert('Ouch! Stop poking me!');
+        });
+            /* Image Changer*/
+            let myImage = document.querySelector('img');
+
+            myImage.onclick = function() {
+                let mySrc = myImage.getAttribute('src');
+                if(mySrc === 'images/firefox-icon.png') {
+                myImage.setAttribute('src','images/image.jpg');
+                } else {
+                myImage.setAttribute('src','images/firefox-icon.png');
+                }
+            }
+         
+    </script>
+</body>
+<script src="javascript/script.js"></script>
+</html>
